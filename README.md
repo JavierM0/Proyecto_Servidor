@@ -10,7 +10,7 @@ Fuera de la aplicación se incluye una imagen Docker de la aplicación.
 A continuación, se enmarcan los prerrequisitos e instalación para ejecutar el programa.
 
 # Prerrequisitos
-	* Una instalacion de node.js
+* Una instalacion de node.js
 
 # Instalación
 Descargar o realizar un pull del repositorio y ejecutar index.js el cual abrirá la pagina en el puerto 8888.
