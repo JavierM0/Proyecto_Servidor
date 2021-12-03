@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Page</title>
   <h1>
-    Contact Query
+		Automax
+	</h1>
+  <h2>
+ <table>
+   <tr>
+     <th><a href="index.html">Principal</a></th>
+     <th><a href="about.html">Sobre Nosotros</a></th>
+     <th><a href="detail.html">Vehiculos</a></th>
+     <th><a href="contact.html">Contacto</a></th>
+   </tr>
+ </table>
+  </h2>
+  <h1>
+    Informacion de contacto
   </h1>
 </head>
 <body>
-  
+  Escribe tu nombre:
+  <input type="text" id="nombre"/>
+  <br><br>Escribe tu correo:
+  <input type="text" id="correo"/>
+  <br><br>
+  <input type="button" value="Guardar datos" onclick="lafuncion()" />
+
+  <script>
+    let lafuncion = () => {
+      const name = document.getElementById('nombre');
+      const email = document.getElementById('correo');
+    }
+    let data =
+            '\r Name: ' + name.value + ' \r\n ' +
+            'Email: ' + email.value;
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click();
+  </script>
+  <h2>¡Deja tu informacion y nosotros te contactamos!</h2>
 </body>
 </html>
+<php></php>
