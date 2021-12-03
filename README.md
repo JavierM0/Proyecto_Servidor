@@ -36,4 +36,4 @@ Release 1.0
 Node.js
 
 # Imagen Docker
-https://hub.docker.com/repository/docker/javierm0/node-web-app-finished
+https://hub.docker.com/r/javierm0/node-web-app-finished
