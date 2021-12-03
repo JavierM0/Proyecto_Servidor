@@ -23,38 +23,16 @@
   </h1>
 </head>
 <body>
-  Escribe tu nombre:
-  <input type="text" id="nombre"/>
-  <br><br>Escribe tu correo:
-  <input type="text" id="correo"/>
-  <br><br>
-  <input type="button" value="Guardar datos" onclick="lafuncion()" />
-
-  <script>
-    let lafuncion = () => {
-      const name = document.getElementById('nombre');
-      const email = document.getElementById('correo');
-    }
-    let data =
-            '\r Name: ' + name.value + ' \r\n ' +
-            'Email: ' + email.value;
-        const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.txt';
-
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
-
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            document.body.appendChild(newLink);
-        }
-
-        newLink.click();
-  </script>
+  <form action="http://173.255.215.218/paradigmas/actividad_dos.php" method="POST">
+    <p>Escribe tu nombre</p>
+    <input type="text" name="name" required>
+    <p>Escribe tu correo</p>
+    <input type="email" name="email" required>
+    <p>Escribe tu mensaje</p>
+    <textarea name="message" cols="50" rows="7" required></textarea>
+    <hr>
+    <input type="submit" value="send">
+</form>
   <h2>¡Deja tu informacion y nosotros te contactamos!</h2>
 </body>
 </html>
