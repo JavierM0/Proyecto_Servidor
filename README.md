@@ -3,7 +3,7 @@ El proyecto de mi primer servidor consiste en una página web llamada “Automax
 ejecutado en el puerto 8888 donde se encontrara primero un archivo index.html conocido como “landing page” 
 con los detalles de los top 3 vehículos para rentar y con 25 vehículos en la pestaña vehículos o detalle, 
 n la pestaña de nosotros o about podrá encontrar la información de la misión y visión de la compañía, 
-la pestana contacto proporciona un formulario para el contacto del cliente descargando la información en un archivo de texto. 
+la pestana contacto proporciona un formulario para el contacto del cliente utilizando la accion post deja un archivo de texto en servidor. 
 Fuera de la aplicación se incluye una imagen Docker de la aplicación.
 
 # Inicio
